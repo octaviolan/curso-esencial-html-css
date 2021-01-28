@@ -82,11 +82,19 @@ pre {
   background-size: cover, 100px 100px;
 }
 
-h3::before {
-  content: "*";
+.section-content {
+  counter-reset: titleList;
 }
 
-h3::after {
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal);
+}
+
+.section-content h3::after {
   content: "";
   display: block;
   width: 80px;

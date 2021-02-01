@@ -1,0 +1,105 @@
+/*
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+*/
+:root {
+  font-size: 18px;
+  --gray10: #616161;
+  --gray20: #424242;
+  --gray30: #212429;
+  --gray40: #212121;
+  direction: rtl;
+}
+
+body {
+  color: var(--gray40);
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  font-size: 14px;
+  color: var(--gray10);
+}
+
+header a {
+   color: var(--gray10);
+   text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gray40);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: end;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+pre {
+  background: #FEC62E;
+}
+
+.hero {
+  height: 350px;
+  background: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url('../images/pattern.png');
+  /* background-repeat: repeat; */
+  /* background-position: center; */
+  background-size: cover, 100px 100px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal);
+}
+
+.section-content h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--gray20);
+}

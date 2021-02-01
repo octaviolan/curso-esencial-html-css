@@ -1,0 +1,151 @@
+/*
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+*/
+:root {
+  font-size: 18px;
+  --gray10: #616161;
+  --gray20: #424242;
+  --gray30: #212429;
+  --gray40: #212121;
+  direction: ltr;
+}
+
+body {
+  color: var(--gray40);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+header {
+  font-size: 14px;
+  color: var(--gray10);
+}
+
+header a {
+   color: var(--gray10);
+   text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gray40);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 60px;
+  /* text-align: end; */
+  margin-top: 64px;
+  margin-bottom: 16px;
+}
+
+h1 ~ p {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+hr {
+  margin: 64px 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 64px 0 40px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 16px;
+  margin-top: 64;
+  margin-bottom: 24px;
+  font-weight: normal;
+}
+
+pre {
+  background: #FEC62E;
+}
+
+blockquote {
+  margin: 32px 0;
+}
+
+.hero {
+  height: 350px;
+  background: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url('../images/pattern.png');
+  /* background-repeat: repeat; */
+  /* background-position: center; */
+  background-size: cover, 100px 100px;
+}
+
+.section-content {
+  margin-top: 164px;
+}
+
+.section-content:first-of-type {
+  margin-top: 0;
+}
+
+.section-content ol li {
+  line-height: 24px;
+}
+
+.section-content ul li {
+  margin-bottom: 16px;
+}
+
+.section-content + hr {
+  display: none;
+}
+
+.section-content img {
+  margin-top: 40px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal);
+}
+
+.section-content h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--gray20);
+}

@@ -67,10 +67,10 @@ h1 {
   margin-bottom: 16px;
 }
 
-h1 ~ p {
+/* h1 ~ p {
   margin-top: 0;
   margin-bottom: 64px;
-}
+} */
 
 hr {
   margin: 64px 0;
@@ -92,10 +92,23 @@ h3 {
 
 pre {
   background: #FEC62E;
+  padding: 40px;
+  font-family: "Roboto";
+  line-height: 24px;
 }
 
 blockquote {
+  font-size: 24px;
   margin: 32px 0;
+  padding-left: 16px;
+}
+
+blockquote p span {
+  color: var(--gray10);
+}
+
+blockquote span::before {
+  content: '-';
 }
 
 .hero {
@@ -136,15 +149,16 @@ blockquote {
 
 .section-content h3 {
   counter-increment: titleList;
+  padding-bottom: 4px;
 }
 
 .section-content h3::before {
-  content: counter(titleList, decimal);
+  content: counter(titleList, decimal) '. ';
 }
 
 .section-content h3::after {
   content: "";
-  display: block;
+  display: inline-block;
   width: 80px;
   height: 4px;
   background-color: var(--gray20);

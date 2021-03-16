@@ -369,5 +369,61 @@ input[type="submit"] {
   margin: 0 11px;
 }
 
+@media only screen and (max-width: 360px) {
+  .hero {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .header {
+    position: static;
+    margin-top: 20px;
+  }
+
+  header {
+    position: static;
+  }
+
+  .wrapper {
+    margin: auto;
+    padding: 0 10px;
+  }
+
+  pre {
+    overflow: scroll;
+    padding: 20px;
+  }
+
+  .modelo {
+    margin-top: 50px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  input[type="submit"] {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+
+  .footer-content {
+    padding: 20px 0;
+  }
+
+  .footer-content p {
+    font-size: 20px;
+  }
+}
+
 
 

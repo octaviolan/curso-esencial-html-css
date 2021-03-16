@@ -29,63 +29,132 @@
 */
 :root {
   font-size: 18px;
-  --gray10: #616161;
-  --gray20: #424242;
-  --gray30: #212429;
-  --gray40: #212121;
-  direction: rtl;
+  --white10: #FFFFFF;
+  --white20: #A5A3A5;
+  --white30: #3A3539;
+  --white40: #251F24;
+  /* direction: rtl; */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--gray40);
-  font-family: 'Roboto', sans-serif;
+  color: var(--white40);
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Nunito', sans-serif;
+  background: var(--white40);
+  color: var(--white10);
+  /* writing-mode: vertical-lr; */
+  margin: 0;
+  /*define los márgenes lógicos de inicio y final en línea de un elemento, la direccionalidad y la orientación del texto del elemento.*/
+  /* margin-inline: 50px; */
+  /* margin-block: 50px; */
+}
+
+.header {
+  /* position: sticky; */
+  /* inset-block-start: -45px; */
+}
+
+.header-content {
+  padding-inline: 10px;
+  /* position: relative; */
+  /* inset-block-start: 64px; */
 }
 
 header {
+  margin-block-start: 20px;
   font-size: 14px;
-  color: var(--gray10);
+  color: var(--white10);
+  /* position: absolute; */
+  /* top */
+  /* inset-block-start: 0; */
+  /* bottom */
+  /* inset-block-end: ; */
+  /* left */
+  /* inset-inline-start: -300px; */
+  /* margin-block-start: 0; */
+  /* inline-size: 188px; */
+  /* right */
+  /* inset-inline-end: ; */
+}
+
+header li {
+  color: var(--white20);
+  margin-block-end: 16px;
 }
 
 header a {
-   color: var(--gray10);
+   color: var(--white20);
    text-decoration: none;
 }
 
 header a:hover {
-  color: var(--gray40);
+  color: var(--white10);
 }
 
 nav details summary {
   font-weight: bold;
 }
 
+h1, h2, h3 {
+  /* font-weight: normal; */
+}
+
 h1 {
-  font-size: 60px;
-  text-align: end;
+  font-size: 40px;
+  text-align: start;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
+  padding-inline: 10px;
 }
 
 h2 {
   font-size: 32px;
+  margin-block: 40px;
 }
 
 h3 {
   font-size: 24px;
+  font-weight: 600;
+  margin-block: 16px;
 }
 
 pre {
-  background: #FEC62E;
+  background: var(--white30);
+  padding: 40px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  margin-block: 16px;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+p{
+  color: var(--white20);
+  padding-inline: 10px;
 }
 
 .hero {
-  height: 350px;
-  background: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url('../images/pattern.png');
+  height: 100px;
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  /* background: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url('../images/pattern.png'); */
   /* background-repeat: repeat; */
   /* background-position: center; */
   background-size: cover, 100px 100px;
 }
 
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+  max-inline-size: 100%;
+}
+
 .section-content {
   counter-reset: titleList;
+  padding-inline: 10px;
 }
 
 .section-content h3 {
@@ -93,13 +162,190 @@ pre {
 }
 
 .section-content h3::before {
-  content: counter(titleList, decimal);
+  content: counter(titleList, decimal)'. ';
 }
 
-.section-content h3::after {
+/* .section-content h3::after {
   content: "";
-  display: block;
+  display: inline-block;
   width: 80px;
   height: 4px;
-  background-color: var(--gray20);
+  background-color: var(--white20);
+} */
+
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  margin-inline: 0;
+  padding-block: 24px;
+  padding-inline-start: 17px;
+  padding-inline-end: 17px;
+  border-radius: 8px;
+  background: var(--white30);
+}
+
+blockquote p{
+  margin: 0;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--white10);
+}
+
+blockquote p:first-of-type {
+  margin-block-end: 16px;
+}
+
+.section-content li {
+  color: var(--white20);
+  margin-block-end: 16px;
+  line-height: 24px;
+}
+
+.main hr {
+  display: none;
+}
+
+.main hr:first-of-type {
+  display: block;
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
+}
+
+.main {
+  /* border: 1px solid red; */
+}
+
+.wrapper {
+  /* border: 1px solid yellow; */
+  max-inline-size: 668px;
+  margin-inline: auto;
+}
+
+.main-content {
+  /* background: aquamarine; */
+  padding-inline: 16p
+  /* border: 1px solid blue; */
+}
+
+.slider {
+  /* border: 1px solid red; */
+}
+
+.slider-container {
+  display: block;
+  /* block-size: 100px; */
+  overflow: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.video {
+  /* border: 1px solid blue; */
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  /* height: 371px; */
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 16px;
+}
+
+.bullet-list {
+  display:inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: var(--white10);
+  border-radius: 50%;
+}
+
+.form {
+  margin-block-end: 80px;
+}
+
+.form input {
+  inline-size: 100%;
+  border: 1px solid var(--white10);
+  background: var(--white40);
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  color: var(--white10);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--white20);
+}
+
+.form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+}
+
+.footer {
+  background: var(--white10);
+  padding-block: 20px;
+}
+
+.footer-content {
+  text-align: center;
+
+}
+
+.footer-content p{
+  font-size: 24px;
+  color: var(--white40);
+  margin: 0;
+  margin-block-end: 19px;
+}
+
+.footer-content img {
+  margin-inline: 11px;
+}
+
+@media screen and (min-width: 1250px) {
+  .hero {
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 64px;
+  }
+
+  header {
+    position: absolute;
+    inset-inline-start: -300px;
+    margin-block-start: 0;
+    inline-size: 188px;
+  }
+
+  .footer {
+    padding-block: 48px;
+  }
+
+  .footer-content p{
+    font-size: 32px;
+  }
 }

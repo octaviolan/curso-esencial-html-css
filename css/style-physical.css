@@ -81,7 +81,7 @@ header li {
 
 .header {
   position: sticky;
-  top: 0;
+  top: -50px;
 }
 
 .header-content {
@@ -239,6 +239,10 @@ blockquote span::before {
   margin-top: 40px;
 }
 
+.modelo {
+  margin-top: 164px;
+}
+
 .modelo ol,
 .modelo ul {
   padding-left: 20px;
@@ -345,8 +349,25 @@ input[type="submit"] {
 }
 
 .footer {
+  margin-top: 113px;
   background: var(--gray30);
   color: #FFFFFF;
 }
+
+.footer-content {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0 0 16px 0;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.footer-content img {
+  margin: 0 11px;
+}
+
 
 
